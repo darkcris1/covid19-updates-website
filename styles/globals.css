@@ -23,3 +23,11 @@ a {
 .active:hover {
   color: white;
 }
+#nprogress .bar {
+  height: 4px !important;
+  background: #ee3d78 !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #ee3d78, 0 0 5px #ee3d78 !important;
+}

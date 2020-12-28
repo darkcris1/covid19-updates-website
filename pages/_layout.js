@@ -28,6 +28,7 @@ const Layout = ({ title, children }) => {
           rel="stylesheet"
           href="https://bootswatch.com/4/journal/bootstrap.min.css"
         />
+        <script async defer data-domain="covid19-updates.vercel.app" src="https://plausible.io/js/plausible.js"></script>
       </SEO>
       <NavBar />
       {children}

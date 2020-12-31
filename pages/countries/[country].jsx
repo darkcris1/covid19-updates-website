@@ -38,23 +38,23 @@ const country = ({ data = {}, error }) => {
     </>
   )
 }
-export async function getServerSideProps({ query }) {
+export async function getStaticPaths() {
+  const res = await fetch('https://coronavirus-19-api.herokuapp.com/countries')
+  const data = await res.json()
+
+  const paths = data.map(({ country }) => ({ params: { country } }))
+
+  return { paths, fallback: false }
+}
+export async function getStaticProps({ params }) {
   const res = await fetch(
-    'https://coronavirus-19-api.herokuapp.com/countries/' + query.country,
+    'https://coronavirus-19-api.herokuapp.com/countries/' + params.country,
   )
-  try {
-    const data = await res.json()
-    return {
-      props: {
-        data,
-      },
-    }
-  } catch (error) {
-    return {
-      props: {
-        error: 'Country Not FOund',
-      },
-    }
+  const data = await res.json()
+  return {
+    props: {
+      data,
+    },
   }
 }
 

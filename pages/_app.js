@@ -1,4 +1,4 @@
-import Layout from './_layout'
+import Layout from '../components/_layout.jsx'
 import '../styles/globals.css'
 import Router from 'next/router'
 import NProgress from 'nprogress' //nprogress module

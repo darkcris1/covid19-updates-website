@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap'
-import SEO from '../components/SEO'
-import NavBar from '../components/Navbar'
-import Footer from '../components/sections/Footer'
+import SEO from './SEO'
+import NavBar from './Navbar'
+import Footer from './sections/Footer'
 
 const Layout = ({ title, children }) => {
   return (

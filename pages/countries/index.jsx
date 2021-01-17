@@ -23,6 +23,7 @@ export async function getStaticProps() {
     props: {
       data: sortedData,
     },
+    revalidate: 1,
   }
 }
 

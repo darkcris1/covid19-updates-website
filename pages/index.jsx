@@ -35,6 +35,7 @@ export async function getStaticProps() {
   const data = await res.json()
 
   return {
+    revalidate: 1,
     props: {
       data,
     },

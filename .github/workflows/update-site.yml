@@ -1,0 +1,17 @@
+# .github/workflows/scheduled-builds.yml
+name: Next Js Site Rebuild on a CRON Schedule
+
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '59 * * * *'
+  
+jobs:
+  build:
+    name: Next.js Incremental static Generate every hour
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request on website
+        # Hit the webhook endpoint to rebuild  from the "main" branch
+        run: curl https://covid19-updates.vercel.app/
+        run: curl https://covid19-updates.vercel.app/countries

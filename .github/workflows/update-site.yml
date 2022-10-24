@@ -4,7 +4,7 @@ name: Next Js Site Rebuild on a CRON Schedule
 on:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '59 * * * *'
+    - cron: '2 * * * *'
   
 jobs:
   build:

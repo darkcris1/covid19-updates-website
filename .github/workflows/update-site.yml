@@ -10,6 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cURL request on website
-      - uses: actions/checkout@v3
         run: |
           curl https://covid19-updates.vercel.app/

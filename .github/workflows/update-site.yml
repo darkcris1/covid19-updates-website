@@ -13,5 +13,6 @@ jobs:
     steps:
       - name: cURL request on website
         # Hit the webhook endpoint to rebuild  from the "main" branch
-        run: curl https://covid19-updates.vercel.app/
-        run: curl https://covid19-updates.vercel.app/countries
+        run: | 
+          curl https://covid19-updates.vercel.app/
+          curl https://covid19-updates.vercel.app/countries

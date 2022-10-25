@@ -2,7 +2,7 @@ name: Next Js Site Rebuild on a CRON Schedule
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 0 * * *'
   
 jobs:
   build:
@@ -12,3 +12,4 @@ jobs:
       - name: cURL request on website
         run: |
           curl https://covid19-updates.vercel.app/
+          curl -X POST -d "email=${{ secrets.ADMIN_EMAIL }}&password=${{ secrets.ADMIN_PASSWORD }}" https://www.sarwisi.com/api/credits/currency/update/rate/

@@ -2,7 +2,7 @@ name: Next Js Site Rebuild on a CRON Schedule
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 0'
   
 jobs:
   build:
